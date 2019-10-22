@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wheels</title>
+  <style>
+    body {
+      min-height: 3000px;
+      background-image: linear-gradient(25deg, #0c7d82, #3ea39b, #62cbb5, #84f5cf)
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 8px 4px rgba(255, 255, 255, .2);
+      text-align: center;
+      background: #0c7d82;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="backToTop">Top</div>
+  <script src="./BackToTop/backToTop.js"></script>
+  <script>
+    new BackToTop({
+      element: '#backToTop'
+    })
+  </script>
+</body>
+</html>
