@@ -30,10 +30,22 @@
 <body>
   <div id="backToTop">Top</div>
   <script src="./BackToTop/index.js"></script>
+  <script src="./utils/storage.js"></script>
   <script>
     new BackToTop({
       element: '#backToTop'
     })
+
+
+
+    storage.set('test1', 'value1')
+    storage.set('test2', 'value2')
+    storage.set('test3', 'value3')
+    storage.set('test4', 'value4')
+    storage.remove('test1', 'test2')
+    console.log(storage.get('test1'))
+    console.log(storage.all())
+    console.log(storage.has('test1'))
   </script>
 </body>
 </html>

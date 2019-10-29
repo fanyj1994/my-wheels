@@ -70,7 +70,6 @@ class BackToTop {
           self._fadeIn()
         }
       } else {
-        console.log(123, currentOpacity)
         if (currentOpacity === 100) {
           self._fadeOut()
         }
@@ -109,6 +108,7 @@ class BackToTop {
     let timer = null
     let opacity = 0
     const self = this
+    cancelAnimationFrame(timer)
     function changeOpacity() {
       opacity = opacity + 10
       self._setOpacity(self.element, opacity)
@@ -125,6 +125,7 @@ class BackToTop {
     let opacity = 100
     let timer = null
     const self = this
+    cancelAnimationFrame(timer)
     function changeOpacity() {
       opacity = opacity - 20
       self._setOpacity(self.element, opacity)
