@@ -6,7 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Wheels</title>
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
     body {
+      padding: 10px;
       min-height: 3000px;
       background-image: linear-gradient(25deg, #0c7d82, #3ea39b, #62cbb5, #84f5cf)
     }
@@ -25,18 +30,34 @@
       background: #0c7d82;
       color: #fff;
     }
+
+    #tab {
+      width: 300px;
+    }
   </style>
+  <link rel="stylesheet" type="text/css" href="./Tab/index.css" />
 </head>
 <body>
   <div id="backToTop">Top</div>
+  <div id="tab">
+    <ul class="tabs">
+      <li data-role="tab">1</li>
+      <li data-role="tab">2</li>
+      <li data-role="tab">3</li>
+    </ul>
+    <div class="panels">
+      <div data-role="panel">panel1</div>
+      <div data-role="panel">panel2</div>
+      <div data-role="panel">panel3</div>
+    </div>
+  </div>
   <script src="./BackToTop/index.js"></script>
   <script src="./utils/storage.js"></script>
+  <script src="./Tab/index.js"></script>
   <script>
     new BackToTop({
       element: '#backToTop'
     })
-
-
 
     storage.set('test1', 'value1')
     storage.set('test2', 'value2')
@@ -46,6 +67,13 @@
     console.log(storage.get('test1'))
     console.log(storage.all())
     console.log(storage.has('test1'))
+
+    new Tab({
+      element: '#tab',
+      hasDelay: true,
+      delayTime: 300,
+      activeIndex: 0
+    })
   </script>
 </body>
 </html>
